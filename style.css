@@ -1,0 +1,105 @@
+*{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body{
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(90deg, #0c0c0c, #000, #0c0c0c);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 280px;
+    background-color: white;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+.container h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container input{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0px 30px rgb(185, 185, 185);
+    border-radius: 10px;
+    width: 95%;
+    outline: none;
+    border: none;
+    height: 60px;
+    padding-left: 20px;
+    font-size: medium;
+}
+
+.container input:hover{
+    box-shadow: 0 2px 30px rgb(153, 153, 153);;
+}
+
+.container img{
+    display: none;
+}
+
+.container img.showCode{
+    margin-top: 30px;
+    display: block;
+}
+
+.container .error{
+    /* background-color: red; */
+    animation: shake 0.1s linear 10;
+}
+
+@keyframes shake {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-5px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(-2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.container button{
+    background-color: rgb(29, 108, 255);
+    color: white;
+    outline: none;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: large;
+    margin-top: 30px;
+    cursor: pointer;
+    animation: dulon .1s linear 10;
+}
+
+.container button:hover{
+    background-color: rgb(7, 94, 255);
+}
+
+/* responsive design */
+@media(min-width: 411px){
+    .container{
+        width: 400px;
+    }
+}
